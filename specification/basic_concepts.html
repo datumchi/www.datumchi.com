@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basic Concepts of the DatumChi Protocol &mdash; DatumChi Protocol 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DatumChi Protocol Overview" href="protocol/overview.html" />
+    <link rel="prev" title="Introduction and Use Cases" href="intro_usecases.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DatumChi Protocol
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro_usecases.html">Introduction and Use Cases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Concepts of the DatumChi Protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#datumchi-domain">DatumChi Domain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dns-domain-configuration">DNS Domain Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#identities">Identities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#participant">Participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#collaborations">Collaborations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-state">Data State</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="protocol/overview.html">DatumChi Protocol Overview</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DatumChi Protocol</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Basic Concepts of the DatumChi Protocol</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/basic_concepts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-concepts-of-the-datumchi-protocol">
+<h1>Basic Concepts of the DatumChi Protocol<a class="headerlink" href="#basic-concepts-of-the-datumchi-protocol" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="datumchi-domain">
+<h2>DatumChi Domain<a class="headerlink" href="#datumchi-domain" title="Permalink to this headline">¶</a></h2>
+<p>A <em>Domain</em> in the DatumChi Protocol is the owner of a set of identities, collaborations, and related nodes created and managed using the DatumChi Protocol, and initially configured using the Domain Name System.</p>
+<p>The Domain is uniquely identified by its “Domain Key,” described below.</p>
+<div class="section" id="dns-domain-configuration">
+<h3>DNS Domain Configuration<a class="headerlink" href="#dns-domain-configuration" title="Permalink to this headline">¶</a></h3>
+<p>The DatumChi Protocol relies on the internet’s most robust directory service that exists for initial configuration of a DataumChi domain: DNS.</p>
+<p>For the domain in which you want to run your DatumChi services, you must add the following DNS records:</p>
+<ul class="simple">
+<li><p>SRV - to define the identity and collaboration services for your node</p>
+<ul>
+<li><p>For example: datumchiidentity.tcp.node.example.com. 86400 IN SRV 0 5 7717 node.example.com.</p></li>
+<li><p>For example: datumchicollaboration.tcp.node.example.com. 86400 IN SRV 0 5 7707 node.example.com.</p></li>
+</ul>
+</li>
+<li><p>TXT - to prove domain’s ownership of a public key (the <em>“Domain Key”</em>)</p>
+<ul>
+<li><p>datumchi_pubkey -&gt; Gblahblahblah</p></li>
+<li><p>datumchi_signature -&gt; (signed sha256Hash(hostname) with privkey)</p></li>
+</ul>
+</li>
+<li><p>Key Encoding: Ed25519 using base32 encoding</p></li>
+<li><p>Signature Encoding: Using base32 encoding (?)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="identities">
+<h2>Identities<a class="headerlink" href="#identities" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Addressing format: [<a class="reference external" href="mailto:name&#37;&#52;&#48;gmail&#46;com">name<span>&#64;</span>gmail<span>&#46;</span>com</a>:/optional/path]datumchi.com</p></li>
+<li><p>Nodes have primary domain over their identities</p></li>
+</ul>
+</div>
+<div class="section" id="participant">
+<h2>Participant<a class="headerlink" href="#participant" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A participant, utilizing an Identity, creates Collaborations and Data States within them</p></li>
+<li><p>A participant utilizes the network through a Device</p></li>
+</ul>
+</div>
+<div class="section" id="collaborations">
+<h2>Collaborations<a class="headerlink" href="#collaborations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Collaborations are activities between identities, where this collaboration requires identities to agree to some state, data, set of data, or etc</p></li>
+</ul>
+</div>
+<div class="section" id="data-state">
+<h2>Data State<a class="headerlink" href="#data-state" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A “data state” is a piece of data that two or more identities should agree to</p></li>
+<li><p>“Data states” will change over time, and “data states” may have attributes available to some parties in a collaboration</p></li>
+<li><p>Collaborations can change things over time (“Account Model”), or constantly retire and recreate things (“UTXO”)</p></li>
+<li><p>Data States can have some standard attributes:</p>
+<ul>
+<li><p>Originator address of the thing when first created</p></li>
+<li><p>Required signatories of the thing - acceptance of the thing</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="protocol/overview.html" class="btn btn-neutral float-right" title="DatumChi Protocol Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro_usecases.html" class="btn btn-neutral float-left" title="Introduction and Use Cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Michael Dowling
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
